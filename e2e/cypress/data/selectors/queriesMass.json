@@ -1,7 +1,7 @@
 {
   "topCitiesByOpens": {
-    "TOP_CITIES_BY_OPENS_LIST": ".sc-ktHwxA.dxmdxV",
-    "TOP_CITIES_INDIANAPOLIS_OPENS": ".sc-ktHwxA.dxmdxV > div:nth-child(2) div:nth-child(2) > div:nth-child(2)",
-    "TOP_CITIES_INDIANAPOLIS_PERCENTAGE": ".sc-ktHwxA.dxmdxV > div:nth-child(2) div:nth-child(2) > div:nth-child(3)"
+    "TOP_CITIES_BY_OPENS_LIST": ".sc-cIShpX",
+    "OPENS": ".sc-kafWEX",
+    "PERCENTAGE": ".sc-kafWEX"
   }
 }

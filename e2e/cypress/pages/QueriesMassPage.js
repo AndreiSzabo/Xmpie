@@ -9,22 +9,12 @@ export class QueriesMassPage {
         commonMethods.assertUserIsRedirectedToExpectedPage(queriesMass.ULR);
     }
 
-    assertIndianapolisIsPresentInList() {
-        commonMethods.assertElementContainsExpectedText(topCitiesByOpens.TOP_CITIES_BY_OPENS_LIST, queriesMass.INDIANAPOLIS);
-    }
-
-    assertIndianapolisOpens() {
-        commonMethods.assertElementContainsExpectedText(topCitiesByOpens.TOP_CITIES_INDIANAPOLIS_OPENS, queriesMass.INDIANAPOLIS_OPENS);
-    }
-
-    assertIndianapolisPercentage() {
-        commonMethods.assertElementContainsExpectedText(topCitiesByOpens.TOP_CITIES_INDIANAPOLIS_PERCENTAGE, queriesMass.INDIANAPOLIS_PERCENTAGE);
-    }
-
-    assertIndianapolisRowContainsExpectedData() {
-        this.assertIndianapolisIsPresentInList();
-        this.assertIndianapolisOpens();
-        this.assertIndianapolisPercentage();
+    assertCitiesByOpens(City, NumOfOpens, NumOfPercentages) {
+        cy.contains(topCitiesByOpens.TOP_CITIES_BY_OPENS_LIST, City)
+            .within(() => {
+                cy.get(topCitiesByOpens.OPENS).first().should("have.text", NumOfOpens)
+                cy.get(topCitiesByOpens.PERCENTAGE).last().should("have.text", NumOfPercentages)
+            });
     }
 }
 

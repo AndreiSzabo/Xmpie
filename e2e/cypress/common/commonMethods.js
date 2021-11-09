@@ -22,8 +22,12 @@ export class CommonMethods {
 
     //this method gets and checks inside of a web element if it contains the specific text inserted as parameter
     assertElementContainsExpectedText(webElement, text) {
-        cy.get(webElement).should('be.visible').contains(text);
+        cy.contains(webElement, text);
     };
+
+    assertPageContainsText() {
+
+    }
 
     //this method is needed in order to be able to run tests without getting cross origin error
     setCrossOriginUncaughtErrorFalse() {

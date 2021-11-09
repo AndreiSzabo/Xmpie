@@ -1,5 +1,6 @@
 import {queriesMassPage} from "../../pages/QueriesMassPage";
-import {commonMethods} from "../../common/commonMethods";
+
+const INDIANAPOLIS = 'Indianapolis';
 
 describe("'Top cities by opens' should work as expected", () => {
     beforeEach(() => {
@@ -7,6 +8,6 @@ describe("'Top cities by opens' should work as expected", () => {
     });
 
     it("Correct data should be displayed for 'Indianapolis' row", () => {
-        queriesMassPage.assertIndianapolisRowContainsExpectedData();
+        queriesMassPage.assertCitiesByOpens(INDIANAPOLIS, '110', '3.7');
     })
 })
