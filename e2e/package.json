@@ -1,0 +1,21 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:headless": "npx cypress run",
+    "cypress:open": "npx cypress open",
+    "cypress:install": "cypress install",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+  },
+  "devDependencies": {
+    "cypress": "^8.7.0"
+  }
+}
